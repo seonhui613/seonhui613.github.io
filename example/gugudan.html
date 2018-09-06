@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="bootstrap.css">
+<style media="screen">
+  form{
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h3 class="text-center">구구단</h3>
+    <form class="" >
+      <label for="">From</label>
+      <input type="number" min="1" max="20" id ="input1" >
+      &nbsp;~&nbsp;
+
+      <label for="">To</label>
+      <input type="number" min="1" max="20" id ="input2" >
+      &nbsp;
+
+      <button type="button"  onclick="buttonClicked()">SHOW</button>
+
+    </form>
+
+    <table class ="table table-striped text-center">
+      <thead id = "target2">
+      </thead>
+
+      <tbody id = "target">
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <script type="text/javascript">
+
+function buttonClicked(){
+  var tds ;
+  var trs = [];
+  var start = parseInt(document.getElementById("input1").value);
+  var end =  parseInt(document.getElementById("input2").value);
+  var head = [];
+  console.log(start.value);
+    console.log(end.value);
+  for (var i = 1; i <= 20; i++) {  //행
+    tds = [];
+    for (var j = start; j <= end; j++) {  // 열
+      tds.push("<td>" + j + "*" + i + "=" + (i * j)+ "</td>");
+    }
+    trs.push("<tr>"+tds.join("")+"</tr>");
+  }
+
+  for (var i = start; i <= end; i++) {
+     head.push("<th>"+i+"</th>")
+     var thead= document.getElementById("target2");
+     thead.innerHTML=head.join("");
+  }
+
+  var tbody= document.getElementById("target");
+  tbody.innerHTML=trs.join("");
+
+
+}
+  </script>
+
+</body>
+
+</html>
