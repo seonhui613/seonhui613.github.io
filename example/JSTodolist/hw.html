@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <title> To-do list</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+    .done{
+        text-decoration: line-through;
+      }
+      h1{
+        color : gray;
+        text-align: center;
+        background-color: lavender;
+
+      }
+      .box{
+        text-align: center;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box" style="background-color: lavender" >
+        <h1>To-do List</h1>
+        <div class="inputclass" >
+          <label for="title" >해야 할 것 :</label>
+          <input  type="text" id ="inputTitle" size ="60" value="">
+          <button  type="button" id="buttonAdd" class="btn btn-info">추가</button>
+        </div>
+      </div>
+
+      <br>
+      <table class="table table-striped ">
+        <thead>
+          <tr>
+            <th class="col-sm-4"> NO. </th>
+            <th class="col-sm-4"> title </th>
+            <th class="col-sm-4"> menu </th>
+          </tr>
+        </thead>
+        <tbody id ="target">
+
+        </tbody>
+      </table>
+    </div>
+    <script src="hw.js" charset=""utf-8"></script>
+
+  </body>
+</html>
